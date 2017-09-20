@@ -47,6 +47,9 @@
                                             <constraint firstAttribute="height" constant="30" id="Dij-Jn-d6g"/>
                                         </constraints>
                                         <state key="normal" image="addGoal"/>
+                                        <connections>
+                                            <action selector="goalBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q1g-Sb-tUt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.42745098039215684" green="0.73725490196078436" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
@@ -83,7 +86,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="67"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SeE-E1-qMA" id="oyV-V9-F8r">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -103,6 +106,9 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7Wj-64-Bpt" secondAttribute="bottom" id="rfK-sY-W5C"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tablewView" destination="7Wj-64-Bpt" id="yxE-mk-waS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
