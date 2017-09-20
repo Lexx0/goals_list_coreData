@@ -15,6 +15,7 @@
 		799C0ED01F72B73200BDB009 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799C0ECE1F72B73200BDB009 /* LaunchScreen.storyboard */; };
 		799C0ED91F72B85900BDB009 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799C0ED81F72B85900BDB009 /* UIViewController+Extension.swift */; };
 		79D4AAF01F72CBBC00FF1CBB /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4AAEF1F72CBBC00FF1CBB /* GoalCell.swift */; };
+		79D4AAF21F72DFAA00FF1CBB /* GoalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4AAF11F72DFAA00FF1CBB /* GoalType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		799C0ED11F72B73200BDB009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		799C0ED81F72B85900BDB009 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extension.swift"; path = "Extensions/UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		79D4AAEF1F72CBBC00FF1CBB /* GoalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoalCell.swift; path = View/GoalCell.swift; sourceTree = "<group>"; };
+		79D4AAF11F72DFAA00FF1CBB /* GoalType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoalType.swift; path = Enums/GoalType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		799C0EDC1F72BC5000BDB009 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				79D4AAF11F72DFAA00FF1CBB /* GoalType.swift */,
 			);
 			name = Enums;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			files = (
 				799C0ED91F72B85900BDB009 /* UIViewController+Extension.swift in Sources */,
 				799C0EC51F72B73100BDB009 /* GoalsVC.swift in Sources */,
+				79D4AAF21F72DFAA00FF1CBB /* GoalType.swift in Sources */,
 				799C0EC31F72B73100BDB009 /* AppDelegate.swift in Sources */,
 				79D4AAF01F72CBBC00FF1CBB /* GoalCell.swift in Sources */,
 				799C0ECB1F72B73200BDB009 /* GoalsList.xcdatamodeld in Sources */,
