@@ -182,7 +182,7 @@
         <!--Create GoalVC-->
         <scene sceneID="Vt8-Hg-hRx">
             <objects>
-                <viewController id="FBQ-vC-vZI" customClass="CreateGoalVC" customModule="GoalsList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateGoalVC" id="FBQ-vC-vZI" customClass="CreateGoalVC" customModule="GoalsList" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dte-T8-xzI"/>
                         <viewControllerLayoutGuide type="bottom" id="4mh-62-Df1"/>
