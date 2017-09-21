@@ -19,10 +19,8 @@ class GoalsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tablewView.delegate = self
-        tablewView.dataSource = self
-        tablewView.isHidden = false
-
+        initialConfigue()
+        
     }
 
     @IBAction func goalBtnPressed(_ sender: Any) {
@@ -30,6 +28,13 @@ class GoalsVC: UIViewController {
         guard let createGoalVC = storyboard?.instantiateViewController(withIdentifier: "CreateGoalVC") else { return }
         
         presentDetail(createGoalVC)
+    }
+    
+    func initialConfigue() {
+        
+        tablewView.delegate = self
+        tablewView.dataSource = self
+        tablewView.isHidden = false
     }
 }
 
