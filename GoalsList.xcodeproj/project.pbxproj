@@ -19,6 +19,7 @@
 		79D4AAF41F73D17700FF1CBB /* CreateGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4AAF31F73D17700FF1CBB /* CreateGoalVC.swift */; };
 		79D4AAF61F73D6F000FF1CBB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4AAF51F73D6F000FF1CBB /* UIView+Extension.swift */; };
 		79D4AAF81F73DE7E00FF1CBB /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4AAF71F73DE7E00FF1CBB /* UIButton+Extension.swift */; };
+		79D4AAFA1F74036A00FF1CBB /* FinishGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4AAF91F74036A00FF1CBB /* FinishGoalVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		79D4AAF31F73D17700FF1CBB /* CreateGoalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateGoalVC.swift; path = Controller/CreateGoalVC.swift; sourceTree = "<group>"; };
 		79D4AAF51F73D6F000FF1CBB /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "Extensions/UIView+Extension.swift"; sourceTree = "<group>"; };
 		79D4AAF71F73DE7E00FF1CBB /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIButton+Extension.swift"; path = "Extensions/UIButton+Extension.swift"; sourceTree = "<group>"; };
+		79D4AAF91F74036A00FF1CBB /* FinishGoalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinishGoalVC.swift; path = Controller/FinishGoalVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				799C0EC41F72B73100BDB009 /* GoalsVC.swift */,
 				79D4AAF31F73D17700FF1CBB /* CreateGoalVC.swift */,
+				79D4AAF91F74036A00FF1CBB /* FinishGoalVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				79D4AAF81F73DE7E00FF1CBB /* UIButton+Extension.swift in Sources */,
 				79D4AAF41F73D17700FF1CBB /* CreateGoalVC.swift in Sources */,
 				79D4AAF01F72CBBC00FF1CBB /* GoalCell.swift in Sources */,
+				79D4AAFA1F74036A00FF1CBB /* FinishGoalVC.swift in Sources */,
 				799C0ECB1F72B73200BDB009 /* GoalsList.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
