@@ -37,6 +37,7 @@ class GoalsVC: UIViewController {
                 }
             }
         }
+        tablewView.reloadData()
     }
 
     @IBAction func goalBtnPressed(_ sender: Any) {
@@ -72,7 +73,9 @@ extension GoalsVC: UITableViewDataSource, UITableViewDelegate {
         
         let goal = goals[indexPath.row]
         
-        cell.configureCell(description: goal.goalDescription!, type: GoalType(rawValue: goal.goalType!)!, goalProgressAmount: Int(goal.goalProgress))
+        cell.configureCell(goal: goal)
+        
+//        cell.configureCell(description: goal.goalDescription!, type: GoalType(rawValue: goal.goalType!)!, goalProgressAmount: Int(goal.goalProgress))
 //        cell.configureCell(description: "Eat crap", type: "short term", goalProgressAmount: 2)
         
         return cell
