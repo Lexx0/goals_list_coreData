@@ -17,6 +17,7 @@
 		79D4AAF01F72CBBC00FF1CBB /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4AAEF1F72CBBC00FF1CBB /* GoalCell.swift */; };
 		79D4AAF21F72DFAA00FF1CBB /* GoalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4AAF11F72DFAA00FF1CBB /* GoalType.swift */; };
 		79D4AAF41F73D17700FF1CBB /* CreateGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4AAF31F73D17700FF1CBB /* CreateGoalVC.swift */; };
+		79D4AAF61F73D6F000FF1CBB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4AAF51F73D6F000FF1CBB /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		79D4AAEF1F72CBBC00FF1CBB /* GoalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoalCell.swift; path = View/GoalCell.swift; sourceTree = "<group>"; };
 		79D4AAF11F72DFAA00FF1CBB /* GoalType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoalType.swift; path = Enums/GoalType.swift; sourceTree = "<group>"; };
 		79D4AAF31F73D17700FF1CBB /* CreateGoalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateGoalVC.swift; path = Controller/CreateGoalVC.swift; sourceTree = "<group>"; };
+		79D4AAF51F73D6F000FF1CBB /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "Extensions/UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				799C0ED81F72B85900BDB009 /* UIViewController+Extension.swift */,
+				79D4AAF51F73D6F000FF1CBB /* UIView+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			files = (
 				799C0ED91F72B85900BDB009 /* UIViewController+Extension.swift in Sources */,
 				799C0EC51F72B73100BDB009 /* GoalsVC.swift in Sources */,
+				79D4AAF61F73D6F000FF1CBB /* UIView+Extension.swift in Sources */,
 				79D4AAF21F72DFAA00FF1CBB /* GoalType.swift in Sources */,
 				799C0EC31F72B73100BDB009 /* AppDelegate.swift in Sources */,
 				79D4AAF41F73D17700FF1CBB /* CreateGoalVC.swift in Sources */,
