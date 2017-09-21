@@ -30,7 +30,8 @@ class GoalsVC: UIViewController {
         self.fetch { (complete) in
             if complete {
                 if self.goals.count >= 1 {
-//                    tableView.isHidden = false
+                    tablewView.isHidden = false
+//                    tablewView.reloadData()
                     
                 } else {
                     tablewView.isHidden = true
