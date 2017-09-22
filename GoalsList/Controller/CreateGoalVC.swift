@@ -12,11 +12,9 @@ class CreateGoalVC: UIViewController, UITextViewDelegate {
 
     
     @IBOutlet weak var goalDescriptoinTextView: UITextView!
-    @IBOutlet weak var shortTermBtn: UIButton!
-    @IBOutlet weak var longTermBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
     
-    var goalType: GoalType = .shortTerm
+//    var goalType: GoalType = .shortTerm
     
     
     
@@ -42,20 +40,6 @@ class CreateGoalVC: UIViewController, UITextViewDelegate {
     }
     
     
-    @IBAction func shortTermBtnPressed(_ sender: Any) {
-        
-        goalType = .shortTerm
-        shortTermBtn.setSelectedColor()
-        longTermBtn.setDeselectedColor()
-    }
-    
-    @IBAction func longTermBtnPressed(_ sender: Any) {
-        
-        goalType = .longTerm
-        shortTermBtn.setDeselectedColor()
-        longTermBtn.setSelectedColor()
-    }
-    
     @IBAction func backBtnPressed(_ sender: Any) {
         
         dissmissDetail()
@@ -65,8 +49,6 @@ class CreateGoalVC: UIViewController, UITextViewDelegate {
     func initialConfig() {
         
         nextBtn.bindToKeyBoard()
-        shortTermBtn.setSelectedColor()
-        longTermBtn.setDeselectedColor()
         
         goalDescriptoinTextView.delegate = self
     }

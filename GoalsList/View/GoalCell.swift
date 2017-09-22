@@ -10,15 +10,14 @@ import UIKit
 
 class GoalCell: UITableViewCell {
 
-    @IBOutlet weak var goalDescriptionLbl: UILabel!
-    @IBOutlet weak var goalTypeLbl: UILabel!
-    @IBOutlet weak var goalProgressLbl: UILabel!
-
     
+    @IBOutlet weak var noteTitleLbl: UILabel!
+    @IBOutlet weak var noteBodyLbl: UILabel!
+
+
     func configureCell(goal: Goal) {
         
-        self.goalTypeLbl.text = goal.goalType!
-        self.goalDescriptionLbl.text = goal.goalDescription
-        self.goalProgressLbl.text = String(describing: goal.goalProgress)
+        self.noteTitleLbl.text = goal.goalType!
+        self.noteBodyLbl.text = goal.goalDescription
     }
 }
