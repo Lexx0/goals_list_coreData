@@ -144,7 +144,28 @@ extension GoalsVC {
             debugPrint("Could not fetch \(error.localizedDescription)")
             completion(false)
         }
+    }
+    
+    func setGoalProgress(atIndexPath indexPath: IndexPath) {
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
         
+        let choosenGoal = goals[indexPath.row]
+        
+        if choosenGoal.goalProgress < choosenGoal.goalCompletionValue {
+            
+            choosenGoal.goalProgress = choosenGoal.goalProgress + 1
+            
+        } else if choosenGoal.goalProgress >= choosenGoal.goalCompletionValue {
+            
+            return
+        }
+        
+        do {
+            try managedContext.save()
+            print("We've successfully incremented progress by 1! Ye-e-e-ey")
+        } catch {
+            debugPrint("could not set goal Progress: \(error.localizedDescription)")
+        }
     }
 }
 

@@ -24,10 +24,10 @@ class GoalCell: UITableViewCell {
         
         if goal.goalProgress == goal.goalCompletionValue {
             self.goalCompletionView.isHidden = false
-            self.goalCompletionView.isUserInteractionEnabled = true
+//            self.goalCompletionView.isUserInteractionEnabled = true
         } else {
             self.goalCompletionView.isHidden = true
-            self.goalCompletionView.isUserInteractionEnabled = false
+//            self.goalCompletionView.isUserInteractionEnabled = false
         }
     }
 }
