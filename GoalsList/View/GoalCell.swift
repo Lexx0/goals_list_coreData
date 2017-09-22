@@ -17,7 +17,7 @@ class GoalCell: UITableViewCell {
 
     func configureCell(goal: Goal) {
         
-        self.noteTitleLbl.text = goal.goalType!
-        self.noteBodyLbl.text = goal.goalDescription
+        self.noteTitleLbl.text = goal.goalTitle
+        self.noteBodyLbl.text = goal.goalTextBody
     }
 }

@@ -43,10 +43,10 @@ class FinishGoalVC: UIViewController, UITextFieldDelegate {
         
         let goal = Goal(context: managedContext)
         
-        goal.goalDescription = goalDescription
-        goal.goalType = goalType.rawValue
-        goal.goalCompletionValue = Int32(pointsTxtFld.text!)!
-        goal.goalProgress = Int32(0)
+//        goal.goalDescription = goalDescription
+//        goal.goalType = goalType.rawValue
+//        goal.goalCompletionValue = Int32(pointsTxtFld.text!)!
+//        goal.goalProgress = Int32(0)
         
         do {
             try managedContext.save()

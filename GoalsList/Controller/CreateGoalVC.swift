@@ -42,7 +42,7 @@ class CreateGoalVC: UIViewController, UITextViewDelegate {
             noteTitleTextView.text = ""
         }
         
-        if noteDescriptoinTextView.text != "" && noteDescriptoinTextView.text != "А тут будет текст заметки" {
+        if noteDescriptoinTextView.text != "" || noteDescriptoinTextView.text != "А тут будет текст заметки" {
             self.saveData { (complete) in
                 if complete {
                     dismiss(animated: true, completion: nil)
@@ -78,10 +78,9 @@ class CreateGoalVC: UIViewController, UITextViewDelegate {
         
         let goal = Goal(context: managedContext)
         
-        goal.goalDescription = noteDescription
-//        goal.goalType = goalType.rawValue
-//        goal.goalCompletionValue = Int32(pointsTxtFld.text!)!
-//        goal.goalProgress = Int32(0)
+        goal.goalTitle = noteTitleTextView.text
+        goal.goalTextBody = noteDescriptoinTextView.text
+
         
         do {
             try managedContext.save()
