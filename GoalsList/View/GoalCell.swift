@@ -14,11 +14,20 @@ class GoalCell: UITableViewCell {
     @IBOutlet weak var goalTypeLbl: UILabel!
     @IBOutlet weak var goalProgressLbl: UILabel!
 
+    @IBOutlet weak var goalCompletionView: UIView!
     
     func configureCell(goal: Goal) {
         
         self.goalTypeLbl.text = goal.goalType!
         self.goalDescriptionLbl.text = goal.goalDescription
         self.goalProgressLbl.text = String(describing: goal.goalProgress)
+        
+        if goal.goalProgress == goal.goalCompletionValue {
+            self.goalCompletionView.isHidden = false
+            self.goalCompletionView.isUserInteractionEnabled = true
+        } else {
+            self.goalCompletionView.isHidden = true
+            self.goalCompletionView.isUserInteractionEnabled = false
+        }
     }
 }
