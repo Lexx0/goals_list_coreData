@@ -87,7 +87,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="67"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SeE-E1-qMA" id="oyV-V9-F8r">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="sqn-aU-BFx">
@@ -144,13 +144,21 @@
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
+                                                <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fK8-P6-75t">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
+                                                    <color key="backgroundColor" red="1" green="0.71518342111740418" blue="0.089079750685429948" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="sqn-aU-BFx" firstAttribute="top" secondItem="oyV-V9-F8r" secondAttribute="top" constant="8" id="8hP-iu-DkA"/>
                                                 <constraint firstItem="I4x-FC-fe4" firstAttribute="top" secondItem="oyV-V9-F8r" secondAttribute="top" id="As5-wg-JQA"/>
                                                 <constraint firstItem="sqn-aU-BFx" firstAttribute="leading" secondItem="I4x-FC-fe4" secondAttribute="trailing" constant="10" id="BZX-7a-Y5d"/>
                                                 <constraint firstAttribute="bottom" secondItem="I4x-FC-fe4" secondAttribute="bottom" id="E5k-Qy-oNj"/>
+                                                <constraint firstItem="fK8-P6-75t" firstAttribute="top" secondItem="oyV-V9-F8r" secondAttribute="top" id="XP8-do-XXU"/>
+                                                <constraint firstItem="fK8-P6-75t" firstAttribute="leading" secondItem="oyV-V9-F8r" secondAttribute="leading" id="ew4-wA-CCY"/>
+                                                <constraint firstAttribute="bottom" secondItem="fK8-P6-75t" secondAttribute="bottom" id="ljE-xr-D86"/>
                                                 <constraint firstAttribute="bottom" secondItem="sqn-aU-BFx" secondAttribute="bottom" constant="8" id="nnX-3F-rKH"/>
+                                                <constraint firstAttribute="trailing" secondItem="fK8-P6-75t" secondAttribute="trailing" id="p3o-iE-ITX"/>
                                                 <constraint firstAttribute="trailing" secondItem="sqn-aU-BFx" secondAttribute="trailing" constant="8" id="u1G-lY-xyr"/>
                                                 <constraint firstItem="I4x-FC-fe4" firstAttribute="leading" secondItem="oyV-V9-F8r" secondAttribute="leading" constant="10" id="wPq-57-dke"/>
                                             </constraints>
