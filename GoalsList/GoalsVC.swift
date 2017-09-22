@@ -98,15 +98,16 @@ extension GoalsVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
-        print("ПРОВЕРОЧКА 111")
-        
         let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in
-            
-            print("ПРОВЕРОЧКА 222")
             
             self.removeGoal(atIndexpath: indexPath)
             self.fetchCoreDataObjects()
             tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+        
+        let incrementAction = UITableViewRowAction(style: .normal, title: "ADD 1") { (rowAction, indexPath) in
+            
+            self.setGoalProgress(atIndexPath: indexPath)
         }
         
         deleteAction.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
@@ -114,6 +115,9 @@ extension GoalsVC: UITableViewDataSource, UITableViewDelegate {
         return [deleteAction]
     }
 }
+
+
+
 
 extension GoalsVC {
     
