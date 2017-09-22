@@ -56,6 +56,8 @@ class GoalsVC: UIViewController {
     
     func initialConfigue() {
         
+        print("Goals count \(goals.count)")
+        
         tablewView.delegate = self
         tablewView.dataSource = self
         tablewView.isHidden = false
@@ -77,6 +79,8 @@ extension GoalsVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tablewView.dequeueReusableCell(withIdentifier: "goalCell") as? GoalCell else { return UITableViewCell()}
+        
+        guard goals != [] else {print("нет заметок"); return UITableViewCell()}
         
         let goal = goals[indexPath.row]
         

@@ -64,12 +64,20 @@ class CreateGoalVC: UIViewController, UITextViewDelegate {
         
         nextBtn.bindToKeyBoard()
         
+        noteTitleTextView.delegate = self
         noteDescriptoinTextView.delegate = self
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
-        noteDescriptoinTextView.text = ""
-        noteDescriptoinTextView.textColor = UIColor.black
+        
+        if textView == noteDescriptoinTextView {
+            noteDescriptoinTextView.text = ""
+            noteDescriptoinTextView.textColor = UIColor.black
+        } else if textView == noteTitleTextView {
+            noteTitleTextView.text = ""
+            noteTitleTextView.textColor = UIColor.black
+        }
+        
     }
     
     func saveData(completion: (_ finished: Bool) -> ()) {
