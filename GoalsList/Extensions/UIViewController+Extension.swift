@@ -20,19 +20,19 @@ extension UIViewController {
         present(viewContyrollerToPresent, animated: false, completion: nil)
     }
     
-    func presentSecondaryDetail(_ viewControllerToPresent: UIViewController) {
-        let transiotion = CATransition()
-        transiotion.duration = 0.3
-        transiotion.type = kCATransitionPush
-        transiotion.subtype = kCATransitionFromRight
-        
-        guard let presentedVC = presentedViewController else { return }
-        
-        presentedViewController?.dismiss(animated: false, completion: { 
-            self.view.window?.layer.add(transiotion, forKey: kCATransition)
-            self.present(viewControllerToPresent, animated: false, completion: nil)
-        })
-    }
+//    func presentSecondaryDetail(_ viewControllerToPresent: UIViewController) {
+//        let transiotion = CATransition()
+//        transiotion.duration = 0.3
+//        transiotion.type = kCATransitionPush
+//        transiotion.subtype = kCATransitionFromRight
+//        
+//        guard let presentedVC = presentedViewController else { return }
+//        
+//        presentedViewController?.dismiss(animated: false, completion: { 
+//            self.view.window?.layer.add(transiotion, forKey: kCATransition)
+//            self.present(viewControllerToPresent, animated: false, completion: nil)
+//        })
+//    }
     
     func dissmissDetail() {
         

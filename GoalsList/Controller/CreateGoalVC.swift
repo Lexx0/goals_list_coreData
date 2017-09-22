@@ -11,7 +11,8 @@ import UIKit
 class CreateGoalVC: UIViewController, UITextViewDelegate {
 
     
-    @IBOutlet weak var goalDescriptoinTextView: UITextView!
+    @IBOutlet weak var noteTitleTextView: UITextView!
+    @IBOutlet weak var noteDescriptoinTextView: UITextView!
     @IBOutlet weak var nextBtn: UIButton!
     
 //    var goalType: GoalType = .shortTerm
@@ -28,14 +29,25 @@ class CreateGoalVC: UIViewController, UITextViewDelegate {
     
     @IBAction func nextBtnPressed(_ sender: Any) {
         
-        if goalDescriptoinTextView.text != "" && goalDescriptoinTextView.text != "What is your Goal?" {
-            
-            guard let finishGoalVC = storyboard?.instantiateViewController(withIdentifier: "FinishGoalVC") as? FinishGoalVC else { return }
-            
-            finishGoalVC.initData(description: self.goalDescriptoinTextView.text!, type: self.goalType)
-            
-//            presentDetail(finishGoalVC)
-            presentingViewController?.presentSecondaryDetail(finishGoalVC)
+//        if goalDescriptoinTextView.text != "" && goalDescriptoinTextView.text != "What is your Goal?" {
+//            
+//            guard let finishGoalVC = storyboard?.instantiateViewController(withIdentifier: "FinishGoalVC") as? FinishGoalVC else { return }
+//            
+//            finishGoalVC.initData(description: self.goalDescriptoinTextView.text!, type: self.goalType)
+//            
+////            presentDetail(finishGoalVC)
+//            presentingViewController?.presentSecondaryDetail(finishGoalVC)
+//        }
+        if noteTitleTextView.text == "Создайте заголовок" {
+            noteTitleTextView.text = ""
+        }
+        
+        if noteDescriptoinTextView.text != "" && noteDescriptoinTextView.text != "А тут будет текст заметки" {
+            self.saveData { (complete) in
+                if complete {
+                    dismiss(animated: true, completion: nil)
+                }
+            }
         }
     }
     
@@ -46,16 +58,39 @@ class CreateGoalVC: UIViewController, UITextViewDelegate {
     }
     
     
+    
+    
     func initialConfig() {
         
         nextBtn.bindToKeyBoard()
         
-        goalDescriptoinTextView.delegate = self
+        noteDescriptoinTextView.delegate = self
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
-        goalDescriptoinTextView.text = ""
-        goalDescriptoinTextView.textColor = UIColor.black
+        noteDescriptoinTextView.text = ""
+        noteDescriptoinTextView.textColor = UIColor.black
+    }
+    
+    func saveData(completion: (_ finished: Bool) -> ()) {
+        
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        
+        let goal = Goal(context: managedContext)
+        
+        goal.goalDescription = noteDescription
+//        goal.goalType = goalType.rawValue
+//        goal.goalCompletionValue = Int32(pointsTxtFld.text!)!
+//        goal.goalProgress = Int32(0)
+        
+        do {
+            try managedContext.save()
+            print("We've saved it alright ^&*()")
+            completion(true)
+        } catch {
+            debugPrint("Could not save: \(error.localizedDescription)")
+            completion(false)
+        }
     }
     
 }

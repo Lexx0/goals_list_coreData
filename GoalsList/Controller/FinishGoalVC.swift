@@ -17,7 +17,7 @@ class FinishGoalVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var pointsTxtFld: UITextField!
     
     var goalDescription: String!
-    var goalType: GoalType!
+//    var goalType: GoalType!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +31,11 @@ class FinishGoalVC: UIViewController, UITextFieldDelegate {
         pointsTxtFld.delegate = self
     }
     
-    func initData(description: String, type: GoalType) {
-        
-        self.goalDescription = description
-        self.goalType = type
-    }
+//    func initData(description: String, type: GoalType) {
+//        
+//        self.goalDescription = description
+//        self.goalType = type
+//    }
     
     func saveData(completion: (_ finished: Bool) -> ()) {
   
@@ -68,7 +68,6 @@ class FinishGoalVC: UIViewController, UITextFieldDelegate {
                 }
             }
         }
-        
     }
     
     @IBAction func backBtnTapped(_ sender: Any) {
