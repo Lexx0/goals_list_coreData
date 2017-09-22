@@ -15,9 +15,6 @@ class CreateGoalVC: UIViewController, UITextViewDelegate {
     @IBOutlet weak var noteDescriptoinTextView: UITextView!
     @IBOutlet weak var nextBtn: UIButton!
     
-//    var goalType: GoalType = .shortTerm
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,15 +26,6 @@ class CreateGoalVC: UIViewController, UITextViewDelegate {
     
     @IBAction func nextBtnPressed(_ sender: Any) {
         
-//        if goalDescriptoinTextView.text != "" && goalDescriptoinTextView.text != "What is your Goal?" {
-//            
-//            guard let finishGoalVC = storyboard?.instantiateViewController(withIdentifier: "FinishGoalVC") as? FinishGoalVC else { return }
-//            
-//            finishGoalVC.initData(description: self.goalDescriptoinTextView.text!, type: self.goalType)
-//            
-////            presentDetail(finishGoalVC)
-//            presentingViewController?.presentSecondaryDetail(finishGoalVC)
-//        }
         if noteTitleTextView.text == "Создайте заголовок" {
             noteTitleTextView.text = ""
         }

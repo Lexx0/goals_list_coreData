@@ -45,7 +45,6 @@ class GoalsVC: UIViewController {
             if complete {
                 if self.goals.count >= 1 {
                     tablewView.isHidden = false
-                    //                    tablewView.reloadData()
                     
                 } else {
                     tablewView.isHidden = true
@@ -55,8 +54,6 @@ class GoalsVC: UIViewController {
     }
     
     func initialConfigue() {
-        
-        print("Goals count \(goals.count)")
         
         tablewView.delegate = self
         tablewView.dataSource = self
@@ -72,7 +69,7 @@ extension GoalsVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 3
+
         return goals.count
     }
     
@@ -86,8 +83,6 @@ extension GoalsVC: UITableViewDataSource, UITableViewDelegate {
         
         cell.configureCell(goal: goal)
         
-//        cell.configureCell(description: goal.goalDescription!, type: GoalType(rawValue: goal.goalType!)!, goalProgressAmount: Int(goal.goalProgress))
-//        cell.configureCell(description: "Eat crap", type: "short term", goalProgressAmount: 2)
         
         return cell
     }
@@ -102,11 +97,8 @@ extension GoalsVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
-        print("ПРОВЕРОЧКА 111")
         
         let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in
-            
-            print("ПРОВЕРОЧКА 222")
             
             self.removeGoal(atIndexpath: indexPath)
             self.fetchCoreDataObjects()
@@ -137,7 +129,6 @@ extension GoalsVC {
     func fetch(completion: (_ complete: Bool) -> ()) {
         guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
         
-//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Goal")
         let fetchRequest = NSFetchRequest<Goal>(entityName: "Goal")
         
         do {
